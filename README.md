@@ -1,5 +1,9 @@
 This is a port of [inkandswitch/interactive-shape-recognition](https://github.com/inkandswitch/interactive-shape-recognition), an implementation of "A Simple Approach to Recognise Geometric Shapes Interactively" by Joaquim A. Jorge and Manuel J. Fonseca.
 
+See the
+[online demo](https://adil192.github.io/interactive_shape_recognition/)
+to see this plugin in action.
+
 ## Usage
 
 ```dart
