@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             detectedShape: detectedShape,
             onDraw: (points) {
               if (pointDebounce == null || !pointDebounce!.isActive) {
-                pointDebounce = Timer(const Duration(milliseconds: 10), () {
+                pointDebounce = Timer(const Duration(milliseconds: 100), () {
                   detectedShape.value = detectShape(points);
                 });
               }
