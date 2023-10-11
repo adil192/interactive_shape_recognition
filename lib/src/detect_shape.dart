@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:area_polygon/area_polygon.dart';
 import 'package:convex_hull/convex_hull.dart';
 import 'package:interactive_shape_recognition/src/shape.dart';
 import 'package:interactive_shape_recognition/src/utils.dart';

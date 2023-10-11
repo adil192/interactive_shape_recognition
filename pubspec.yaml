@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
 
   convex_hull: ^1.1.2
+  area_polygon: ^1.0.0
 
 dev_dependencies:
   flutter_test:

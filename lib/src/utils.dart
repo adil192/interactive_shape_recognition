@@ -1,17 +1,14 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:area_polygon/area_polygon.dart';
+
 double calcPerimeter(List<Offset> points) {
   double perimeter = 0;
   for (int i = 0; i < points.length - 1; i++) {
     perimeter += (points[i] - points[i + 1]).distance;
   }
   return perimeter;
-}
-
-double calculateArea(List<Offset> points) {
-  // TODO(adil192): implement calculateArea
-  throw UnimplementedError();
 }
 
 Triangle calcLargestTriangle(List<Offset> points) {
