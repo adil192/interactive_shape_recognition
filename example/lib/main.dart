@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
         ),
         body: SizedBox.expand(
           child: CanvasDraw(
+            detectedShape: detectedShape,
             onDraw: (points) {
               if (pointDebounce == null || !pointDebounce!.isActive) {
                 pointDebounce = Timer(const Duration(milliseconds: 10), () {

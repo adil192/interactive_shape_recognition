@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:interactive_shape_recognition/interactive_shape_recognition.dart';
 
 class CanvasDraw extends StatefulWidget {
   const CanvasDraw({
     super.key,
+    required this.detectedShape,
     required this.onDraw,
   });
 
+  final ValueNotifier<DetectedShape?> detectedShape;
   final void Function(List<Offset>) onDraw;
 
   @override
@@ -61,6 +64,28 @@ class _CanvasDrawPainter extends CustomPainter {
       ..strokeCap = StrokeCap.round;
     for (var i = 0; i < state.points.length - 1; i++) {
       canvas.drawLine(state.points[i], state.points[i + 1], paint);
+    }
+
+    final detectedShape = state.widget.detectedShape.value;
+    final shapePaint = Paint()
+      ..color = Colors.red.withOpacity(0.5)
+      ..strokeWidth = 2
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
+
+    switch (detectedShape?.shape) {
+      case null:
+      case Shape.unknown:
+        break;
+      case Shape.circle:
+        final (radius, center) = detectedShape!.generateCircle();
+        canvas.drawCircle(center, radius, shapePaint);
+      case Shape.rectangle:
+        final rect = detectedShape!.generateRectangle();
+        canvas.drawRect(rect, shapePaint);
+      case Shape.line:
+        final (start, end) = detectedShape!.generateLine();
+        canvas.drawLine(start, end, shapePaint);
     }
   }
 
