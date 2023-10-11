@@ -4,14 +4,22 @@ This is a port of [inkandswitch/interactive-shape-recognition](https://github.co
 
 ```dart
 final List<Offset> points = [
-    // your points here, e.g.
-    Offset(0, 0),
-    Offset(0, 1),
-    Offset(0, 2),
+  // your points here, e.g.
+  Offset(0, 0),
+  Offset(0, 1),
+  Offset(0, 2),
 ];
 
 final DetectedShape detectedShape = detectShape(points);
 
-// detectedShape.shape is one of: Shape.circle, Shape.line, Shape.rectangle, or Shape.unknown
-print(detectedShape.shape);
+switch (detectedShape.shape) {
+  case Shape.line:
+    print('Detected a line');
+  case Shape.circle:
+    print('Detected a circle');
+  case Shape.rectangle:
+    print('Detected a rectangle');
+  case Shape.unknown:
+    print('Detected an unknown shape');
+}
 ```
