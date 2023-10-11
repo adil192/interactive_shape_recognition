@@ -6,7 +6,7 @@ import 'package:interactive_shape_recognition/src/shape.dart';
 import 'package:interactive_shape_recognition/src/utils.dart';
 
 /// Detects the shape of the given [points].
-/// 
+///
 /// Returns a [DetectedShape] object with the detected shape
 /// ([DetectedShape.shape]) and some other information.
 DetectedShape detectShape(List<Offset> points) {
@@ -47,17 +47,13 @@ DetectedShape detectShape(List<Offset> points) {
 
   return DetectedShape(
     shape: shape,
-
     maybeCircle: maybeCircle,
     maybeRectangle: maybeRectangle,
     maybeLine: maybeLine,
-
     enclosingRect: enclosingRect,
     convexHull: hull,
-
     firstPoint: points.first,
     lastPoint: points.last,
-
     rLenPch: rLenPch,
     rThinness: rThinness,
     rAltAch: rAltAch,

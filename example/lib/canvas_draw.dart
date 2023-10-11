@@ -25,6 +25,7 @@ class _CanvasDrawState extends State<CanvasDraw> with ChangeNotifier {
       widget.onDraw(points);
     });
   }
+
   @override
   void dispose() {
     removeListener(() {
