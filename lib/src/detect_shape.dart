@@ -47,11 +47,17 @@ DetectedShape detectShape(List<Offset> points) {
 
   return DetectedShape(
     shape: shape,
+
     maybeCircle: maybeCircle,
     maybeRectangle: maybeRectangle,
     maybeLine: maybeLine,
+
     enclosingRect: enclosingRect,
     convexHull: hull,
+
+    firstPoint: points.first,
+    lastPoint: points.last,
+
     rLenPch: rLenPch,
     rThinness: rThinness,
     rAltAch: rAltAch,
