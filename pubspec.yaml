@@ -1,6 +1,6 @@
 name: interactive_shape_recognition
 description: Dart port of inkandswitch/interactive-shape-recognition, an implementation of "A Simple Approach to Recognise Geometric Shapes Interactively".
-version: 1.0.1
+version: 1.1.0
 homepage: https://adil192.github.io/interactive_shape_recognition
 repository: https://github.com/adil192/interactive_shape_recognition
 issue_tracker: https://github.com/adil192/interactive_shape_recognition/issues
