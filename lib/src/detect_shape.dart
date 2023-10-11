@@ -5,6 +5,10 @@ import 'package:convex_hull/convex_hull.dart';
 import 'package:interactive_shape_recognition/src/shape.dart';
 import 'package:interactive_shape_recognition/src/utils.dart';
 
+/// Detects the shape of the given [points].
+/// 
+/// Returns a [DetectedShape] object with the detected shape
+/// ([DetectedShape.shape]) and some other information.
 DetectedShape detectShape(List<Offset> points) {
   final hull = convexHull(
     points,
