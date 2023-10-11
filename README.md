@@ -19,10 +19,13 @@ final DetectedShape detectedShape = detectShape(points);
 switch (detectedShape.shape) {
   case Shape.line:
     print('Detected a line');
+    final (Offset startPoint, Offset endPoint) = detectedShape.generateLine();
   case Shape.circle:
     print('Detected a circle');
+    final (double radius, Offset center) = detectedShape.generateCircle();
   case Shape.rectangle:
     print('Detected a rectangle');
+    final Rect rect = detectedShape.generateRectangle();
   case Shape.unknown:
     print('Detected an unknown shape');
 }
