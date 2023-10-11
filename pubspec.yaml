@@ -1,12 +1,18 @@
 name: interactive_shape_recognition
 description: Dart port of inkandswitch/interactive-shape-recognition; an implementation of "A Simple Approach to Recognise Geometric Shapes Interactively" by Joaquim A. Jorge and Manuel J. Fonseca.
-version: 0.0.1
-homepage: https://github.com/adil192/interactive_shape_recognition
+version: 1.0.0
+homepage: https://adil192.github.io/interactive_shape_recognition
 repository: https://github.com/adil192/interactive_shape_recognition
 issue_tracker: https://github.com/adil192/interactive_shape_recognition/issues
 
+topics:
+  - math
+  - shape-recognition
+  - polygons
+  - js-port
+
 environment:
-  sdk: '>=3.1.3 <4.0.0'
+  sdk: '>=3.1.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
