@@ -60,8 +60,8 @@ class _CanvasDrawPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.black
-      ..strokeWidth = 2
+      ..color = Colors.black.withOpacity(0.5)
+      ..strokeWidth = 3
       ..strokeCap = StrokeCap.round;
     for (var i = 0; i < state.points.length - 1; i++) {
       canvas.drawLine(state.points[i], state.points[i + 1], paint);
@@ -69,10 +69,10 @@ class _CanvasDrawPainter extends CustomPainter {
 
     final detectedShape = state.widget.detectedShape.value;
     final shapePaint = Paint()
-      ..color = Colors.red.withOpacity(0.5)
-      ..strokeWidth = 2
+      ..color = Colors.red.withOpacity(0.3)
+      ..strokeWidth = 5
       ..strokeCap = StrokeCap.round
-      ..style = PaintingStyle.stroke;
+      ..style = PaintingStyle.fill;
 
     switch (detectedShape?.shape) {
       case null:
