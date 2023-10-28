@@ -1,3 +1,7 @@
+## 1.2.0
+
+- For performance, `detectShape` will automatically simplify its input points to a length of 500. You can change this by setting `maxPoints` to a different number or null: `detectShape(points, maxPoints: null)`.
+
 ## 1.1.1
 
 - pub.dev score optimizations
