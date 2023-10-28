@@ -6,10 +6,19 @@ import 'package:interactive_shape_recognition/src/shape.dart';
 import 'package:interactive_shape_recognition/src/utils.dart';
 
 /// Detects the shape of the given [points].
+/// 
+/// If [points] has more than [maxPoints] points,
+/// it will be simplified to [maxPoints] points
+/// to improve performance.
+/// You can disable this by setting [maxPoints] to `null`.
 ///
 /// Returns a [DetectedShape] object with the detected shape
 /// ([DetectedShape.shape]) and some other information.
-DetectedShape detectShape(List<Offset> points) {
+DetectedShape detectShape(List<Offset> points, {int? maxPoints = 500}) {
+  if (maxPoints != null && points.length > maxPoints) {
+    points = simplify(points, maxPoints);
+  }
+
   final hull = convexHull(
     points,
     x: (Offset p) => p.dx,

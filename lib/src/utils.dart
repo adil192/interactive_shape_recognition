@@ -3,6 +3,26 @@ import 'dart:ui';
 
 import 'package:area_polygon/area_polygon.dart';
 
+List<Offset> simplify(List<Offset> points, int targetLength) {
+  if (points.length <= targetLength) {
+    return points;
+  }
+
+  final increment = points.length / targetLength;
+
+  final simplified = <Offset>[];
+  for (int i = 0; i < targetLength; i++) {
+    final index = (i * increment).round();
+    simplified.add(points[index]);
+  }
+
+  if (simplified.last != points.last) {
+    simplified.add(points.last);
+  }
+
+  return simplified;
+}
+
 double calcPerimeter(List<Offset> points) {
   double perimeter = 0;
   for (int i = 0; i < points.length - 1; i++) {
