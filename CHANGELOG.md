@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Updated README to mention https://pub.dev/packages/one_dollar_unistroke_recognizer
+
 ## 1.2.0
 
 - For performance, `detectShape` will automatically simplify its input points to a length of 500. You can change this by setting `maxPoints` to a different number or null: `detectShape(points, maxPoints: null)`.
