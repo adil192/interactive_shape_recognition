@@ -6,7 +6,7 @@ import 'package:interactive_shape_recognition/src/shape.dart';
 import 'package:interactive_shape_recognition/src/utils.dart';
 
 /// Detects the shape of the given [points].
-/// 
+///
 /// If [points] has more than [maxPoints] points,
 /// it will be simplified to [maxPoints] points
 /// to improve performance.
