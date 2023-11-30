@@ -1,3 +1,7 @@
+## 1.2.2
+
+- This package has now been replaced with https://pub.dev/packages/one_dollar_unistroke_recognizer
+
 ## 1.2.1
 
 - Updated README to mention https://pub.dev/packages/one_dollar_unistroke_recognizer
