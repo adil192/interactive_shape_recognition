@@ -4,9 +4,9 @@ See the
 [online demo](https://adil192.github.io/interactive_shape_recognition/)
 to see this plugin in action.
 
-## Update
+## Replacement package
 
-In the future, this package is going to be replaced with [one_dollar_unistroke_recognizer](https://pub.dev/packages/one_dollar_unistroke_recognizer) (currently in development) which is more accurate and performant.
+I recommend using my new package [one_dollar_unistroke_recognizer](https://pub.dev/packages/one_dollar_unistroke_recognizer) instead of this one. It is more accurate, faster, and can detect more shapes.
 
 ## Usage
 
